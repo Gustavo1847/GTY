@@ -20,3 +20,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#tableTema th:first-child,
+#tableTema td:first-child {
+    display: none;
+}
+
+#tableTema th:last-child,
+#tableTema td:last-child {
+    width: 1%;
+    white-space: nowrap;
+}

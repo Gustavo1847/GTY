@@ -4,6 +4,7 @@
     const navTema = document.getElementById('navTema');
     const labelTema = document.getElementById('labelTema');
     const dropdownMenuTema = document.getElementById('dropdownMenuTema');
+    const tableTema = document.getElementById('tableTema');
     const htmlElement = document.documentElement;
 
     // Verificar se há uma preferência de tema salva no localStorage
@@ -37,6 +38,8 @@
 
             dropdownMenuTema.className = 'dropdown-menu dropdown-menu-dark';
 
+            tableTema.className = 'table table-dark table-hover';
+
             htmlElement.setAttribute('data-bs-theme', 'dark');
         } else {
             document.body.classList.remove('dark-mode');
@@ -49,6 +52,8 @@
             labelTema.className = 'form-check-label text-dark';
 
             dropdownMenuTema.className = 'dropdown-menu';
+
+            tableTema.className = 'table table-hover';
 
             htmlElement.setAttribute('data-bs-theme', 'light');
         }
