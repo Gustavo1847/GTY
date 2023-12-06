@@ -1,11 +1,16 @@
 using GTY.Controllers;
+using GTY.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using System;
+using System.Configuration;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<OxeDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
 
 var app = builder.Build();
 

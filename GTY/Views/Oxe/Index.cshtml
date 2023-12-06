@@ -1,9 +1,13 @@
-﻿<div class="display-2 text-center mb-4">
+﻿@{
+    ViewData["Title"] = "Listagem Oxe";
+}
+
+<div class="display-2 text-center mb-4">
     Listagem Oxe
 </div>
 
 <div class="d-grid gap-2 mb-4">
-    <button type="button" class="btn btn-primary">Cadastro</button>
+    <a role="button" class="btn btn-primary" asp-controller="Oxe" asp-action="CadastroPessoa">Cadastro</a>
 </div>
 
 <div class="table-responsive">
@@ -25,8 +29,8 @@
                 <td>Outlet</td>
                 <td class="text-center w-10">
                     <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-outline-primary btn-sm" style="margin-right: 5px;">Editar</a>
-                        <a role="button" class="btn btn-outline-danger btn-sm">Excluir</a>
+                        <a role="button" class="btn btn-outline-primary btn-sm" style="margin-right: 5px;" asp-controller="Oxe" asp-action="EditarPessoa">Editar</a>
+                        <a role="button" class="btn btn-outline-danger btn-sm" asp-controller="Oxe" asp-action="ConfirmarExcluirPessoa">Excluir</a>
                     </div>
                 </td>
             </tr>
@@ -37,8 +41,8 @@
                 <td>38 - Tia Letícia</td>
                 <td class="text-center w-10">
                     <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-outline-primary btn-sm" style="margin-right: 5px;">Editar</a>
-                        <a role="button" class="btn btn-outline-danger btn-sm">Excluir</a>
+                        <a role="button" class="btn btn-outline-primary btn-sm" style="margin-right: 5px;" asp-controller="Oxe" asp-action="EditarPessoa">Editar</a>
+                        <a role="button" class="btn btn-outline-danger btn-sm" asp-controller="Oxe" asp-action="ConfirmarExcluirPessoa">Excluir</a>
                     </div>
                 </td>
             </tr>
